@@ -1,10 +1,15 @@
 .heading-primary {
-  font-size: 6rem;
-  text-transform: uppercase;
-  letter-spacing: 3px;
+  font-size: 7.6rem;
+  text-transform: none;
+  letter-spacing: 0;
   text-align: center;
+  font-weight: 800;
+  line-height: 1;
+  background: linear-gradient(135deg, #ffffff 0%, #b8c0cc 45%, #5fffe1 100%);
+  -webkit-background-clip: text;
+  color: transparent;
   @include respond(phone) {
-    font-size: 4.5rem;
+    font-size: 5rem;
   }
 }
 
@@ -26,9 +31,8 @@
   &__main {
     display: block;
     font-size: 4rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    letter-spacing: 3px;
+    text-transform: none;
+    letter-spacing: 0;
     text-align: center;
     margin-bottom: 3.5rem;
     position: relative;
@@ -45,7 +49,7 @@
       top: calc(100% + 1.5rem);
       height: 5px;
       width: 3rem;
-      background: $themeClrPrimary;
+      background: linear-gradient(90deg, #8bfff0, $themeClrPrimary);
       left: 50%;
       transform: translateX(-50%);
       border-radius: $commonBorderRadius;
@@ -71,7 +75,7 @@
     }
 
     &--lt {
-      color: #eee;
+      color: #a7adb8;
     }
   }
 }
@@ -89,18 +93,19 @@
 }
 
 .btn {
-  background: #fff;
-  color: #333;
+  background: #f5f5f7;
+  color: #050505;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 1.5px;
   display: inline-block;
   font-weight: 700;
-  border-radius: $commonBorderRadius;
-  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
-  transition: transform .3s;
+  border-radius: 999px;
+  box-shadow: 0 18px 50px 0 rgba($themeClrPrimary, 0.2);
+  transition: transform .3s, box-shadow .3s, background .3s;
 
   &:hover {
     transform: translateY(-3px);
+    box-shadow: 0 24px 70px 0 rgba($themeClrPrimary, 0.3);
   }
 
   &--bg {
@@ -113,8 +118,8 @@
   }
 
   &--theme {
-    background: $themeClrPrimary;
-    color: #fff;
+    background: linear-gradient(135deg, #f5f5f7, #9affed);
+    color: #050505;
   }
   &--theme-inv {
     color: $themeClrPrimary;
@@ -133,7 +138,7 @@
 }
 
 .text-primary {
-  color: #fff;
+  color: #c9ced8;
   font-size: 2.2rem;
   text-align: center;
   width: 100%;
